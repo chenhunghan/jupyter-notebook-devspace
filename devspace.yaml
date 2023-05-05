@@ -10,7 +10,7 @@ pipelines:
   # override the default `devspace deploy`\
   deploy: |-
     build_images --all
-    create_deployments --all
+    create_deployments trow jupyter-notebook
   # override the default `devspace dev`
   dev: |-
     start_dev --all
@@ -40,6 +40,7 @@ deployments:
       chart:
         name: trow
         repo: https://trow.io
+  # optional
   redis:
     helm:
       chart:
@@ -52,6 +53,7 @@ deployments:
         master:
           persistence:
             enabled: false
+  # optional
   nginx-ingess:
     helm:
       chart:
@@ -72,6 +74,7 @@ deployments:
         service:
           ports:
           - port: 8888
+  # optional
   ingress-config:
     kubectl:
       inlineManifest: |-

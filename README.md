@@ -8,7 +8,7 @@ Build images and deploy a jupyter notebook in Kubernetes namespace `ai`
 
 ```bash
 devspace use namespace ai
-devspace deploy --max-concurrent-builds=2 # use this on Intel Mac
+devspace deploy
 ```
 
 ## Start
@@ -17,7 +17,7 @@ devspace deploy --max-concurrent-builds=2 # use this on Intel Mac
 devspace dev
 ```
 
-`.ipynb` files in `notebooks` will be synced to the `jupyter-notebook` container, edit files in <[http](http://localhost:8888/lab)> would sync back to local.
+`.ipynb` files in `notebooks` will be synced to the `jupyter-notebook` container, edit files in the notebook, changes would sync back to local.
 
 ## Clean up
 
