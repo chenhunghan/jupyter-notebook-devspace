@@ -1,0 +1,3 @@
+# sync the files to container using `devspace dev`
+notebooks/*.ipynb
+.ipynb_checkpoints/**
